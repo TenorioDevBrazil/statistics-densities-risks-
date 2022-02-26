@@ -20,7 +20,7 @@ int main(){
 
 	int i, j, k, w, ij, percent=0, xx, yy;
 
-	double coexist[n][15]; // media, p, sigma;
+	double coexist[n][23]; // media, p, sigma;
 
 	double auxiliary[N][11];
 	double *media, *p, *sigma;
@@ -36,11 +36,11 @@ int main(){
 
 	seed = Seed;
 
-	v_radius = weakness1;
+	v_weakness = weakness1;
 
 
 
-	for(i=0; i<n; i++){ // v_radius
+	for(i=0; i<n; i++){ // v_weakness
 			for(k=0; k<N; k++){//seed
 
 
@@ -49,14 +49,16 @@ int main(){
 				percent++;
 
 				auxiliary[k][0]=mda0; // den_vacancies[xx]/(num_generations/2)
-				auxiliary[k][1]=mda1;
-				auxiliary[k][2]=mda2;
-				auxiliary[k][3]=mda3;
-				auxiliary[k][4]=mda6; //risk_predation1[xx]/(num_generations/2);
-				auxiliary[k][5]=mda7; // ....
-				auxiliary[k][6]=mda8; // ....
-				auxiliary[k][7]=mda9; // ....
-				auxiliary[k][8]=mda10; //
+				auxiliary[k][1]=mda1;// species1
+				auxiliary[k][2]=mda2;//species2
+				auxiliary[k][3]=mda3;//species3
+				auxiliary[k][4]=mda4;//species4
+				auxiliary[k][5]=mda5; //species5
+				auxiliary[k][6]=mda6; //risk_predation1[xx]/(num_generations/2);
+				auxiliary[k][7]=mda7; //species2 ....
+				auxiliary[k][8]=mda8; //species3
+				auxiliary[k][9]=mda9; //species4
+				auxiliary[k][10]=mda10; //species5
 			
 
 
@@ -110,12 +112,12 @@ int main(){
 
 //resumo da estatistica
 
-			coexist[i][0] = v_radius;
+			coexist[i][0] = v_weakness;
 
-			for(w=0; w<7; w++){
+			for(w=0; w<11; w++){
 
-				coexist[i][w+1] = media[w];
-				coexist[i][w+8] = sigma[w];
+				coexist[i][w+1] = media[w];  //media da soma das variaveis
+				coexist[i][w+12] = sigma[w]; //desvio padrao
 
 			}
 
@@ -124,7 +126,7 @@ int main(){
  seed = Seed;
 
 
-	v_radius+= weakness1;
+	v_weakness+= I_weakness;
 
 
    } // i
@@ -135,7 +137,7 @@ int main(){
 
 	for(i=0; i<n; i++){
 
-                    fprintf(out,"%g %g %g %g %g %g %g %g %g %g %g %g %g %g %g", coexist[i][0], coexist[i][1], coexist[i][2], coexist[i][3], coexist[i][4], coexist[i][5], coexist[i][6], coexist[i][7], coexist[i][8], coexist[i][9], coexist[i][10], coexist[i][11], coexist[i][12], coexist[i][13], coexist[i][14]);
+                    fprintf(out,"%g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g %g", coexist[i][0], coexist[i][1], coexist[i][2], coexist[i][3], coexist[i][4], coexist[i][5], coexist[i][6], coexist[i][7], coexist[i][8], coexist[i][9], coexist[i][10], coexist[i][11], coexist[i][12], coexist[i][13], coexist[i][14],coexist[i][15],coexist[i][16],coexist[i][17],coexist[i][18],coexist[i][19],coexist[i][20],coexist[i][21],coexist[i][22]);
 
 		fprintf(out,"\n");
 	}

@@ -86,7 +86,7 @@ double *alloc(int);
 		n_predations4=0;
 		n_predations5=0;
 
-printf("%d %d %d %d %d %d\n" , counter1, counter2, counter3,counter4,counter5, v_radius);
+//printf("%d %d %d %d %d %d\n" , counter1, counter2, counter3,counter4,counter5, v_radius);
 	while(counter_interac < num_interactions){
 
 		// choosing the active individual
@@ -147,7 +147,7 @@ printf("%d %d %d %d %d %d\n" , counter1, counter2, counter3,counter4,counter5, v
 				}
 			}else if(gsl_action>=(pa) && gsl_action<(pa+pc)){ // intercompetition
 				
-				if(gsl_weakness<weakness1){
+				if(gsl_weakness<v_weakness){
 
 
 
@@ -181,7 +181,7 @@ printf("%d %d %d %d %d %d\n" , counter1, counter2, counter3,counter4,counter5, v
 				}
 			}else if(gsl_action>=(pa) && gsl_action<(pa+pc)){ // intercompetition
 				
-				if(gsl_weakness<weakness2){
+				if(gsl_weakness<v_weakness){
 
 
 
@@ -360,7 +360,7 @@ printf("%d %d %d %d %d %d\n" , counter1, counter2, counter3,counter4,counter5, v
 
 				if(counter1 == 0 || counter2 == 0 || counter3 == 0|| counter4 == 0|| counter5 == 0){
 
-	//printf("%d %d %d %d\n" , counter1, counter2, counter3, v_radius);
+	printf("%d %d %d %d %d %e \n" , counter1, counter2, counter3,counter4,counter5, v_weakness);
 
 			break;
 		}
@@ -404,7 +404,7 @@ printf("%d %d %d %d %d %d\n" , counter1, counter2, counter3,counter4,counter5, v
 
 		        }
 
-		 printf("%f %f %f %f %d %f %f %f %f %f\n",mda1, mda2, mda3,mda0, seed, mda6, mda7, mda8,mda9,mda10);
+		 printf("%f %f %f %f %f %f %d %f %f %f %f %f\n",mda1, mda2, mda3,mda4,mda5,mda0, seed, mda6, mda7, mda8,mda9,mda10);
 
 
 

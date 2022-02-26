@@ -5,9 +5,9 @@
 #include <gsl/gsl_rng.h>
 
 // control parameters
-#define Nx 100
-#define Ny 100
-#define num_generations 1500
+#define Nx 500
+#define Ny 500
+#define num_generations 50
 #define initial_population Nx*Ny/5
 #define num_files 10
 #define num_interactions (num_generations*Nx*Ny)
@@ -85,10 +85,10 @@
 
 // _____________statistics experiment:________________________________________________________
 #define radius 0
-#define n 2      // n*n is the number of simulations v_radius
-#define N 5   // N is the number of simulations varying the seed
+#define n 4      // n*n is the number of simulations v_radius
+#define N 2   // N is the number of simulations varying the seed
 
-#define I_radius  1.0  //raio vai variar de 0 ate o 5 
+#define I_weakness  0.1  //raio vai variar de 0 ate o 5 
 
 #define kappa_kinesis_1 3.0
 

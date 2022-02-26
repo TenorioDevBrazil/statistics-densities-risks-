@@ -15,7 +15,7 @@ void richting_function ();
 
 int counter1, counter2, counter3, counter4, counter5;
 
-int v_radius;
+double v_weakness;
 
 double mda1, mda2, mda3, mda4, mda5, mda0, mda6, mda7, mda8, mda9, mda10; 
 
